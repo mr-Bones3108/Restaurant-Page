@@ -1,15 +1,17 @@
-
-
 const createMenu = ()=>{
     const content = document.getElementById('content');
 
     const pageContent = document.createElement('div')
     pageContent.classList.add('pageContent')
 
+    const menuBox = document.createElement('div')
+    menuBox.classList.add('menuBox')
+
     // Create the menu heading
 const menuHeading = document.createElement('h1');
-menuHeading.textContent = 'Menu';
-pageContent.appendChild(menuHeading);
+menuHeading.textContent = 'Food Menu';
+menuHeading.classList.add('menu-h')
+menuBox.appendChild(menuHeading);
 
 // Create a container for menu items
 const menuContainer = document.createElement('div');
@@ -20,6 +22,9 @@ const menuItems = [
     { name: 'Pizza', price: '$10.99' },
     { name: 'Burger', price: '$8.99' },
     { name: 'Pasta', price: '$12.99' },
+    { name: 'Lasagna', price: '$22.99'},
+    { name: 'Risotto', price: '$16.99' },
+    { name: 'Tiramisu', price: '$17.99' },
     // Add more items here
 ];
 
@@ -40,7 +45,8 @@ menuItems.forEach(item => {
 });
 
 // Append the menu container to the content div
-pageContent.appendChild(menuContainer);
+menuBox.appendChild(menuContainer);
+pageContent.appendChild(menuBox)
 content.appendChild(pageContent)
 
 }
