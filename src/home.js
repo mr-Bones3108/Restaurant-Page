@@ -12,7 +12,7 @@ const createHome = () => {
     imgSection.classList.add('img-section')
 
     const imgDisplay = document.createElement('img')
-    imgDisplay.src = '../dist/img/pizza.jpg';
+    imgDisplay.src = 'https://mfiles.alphacoders.com/192/192040.jpg';
     imgDisplay.alt = "pizza image"
     imgDisplay.height = 400
     imgDisplay.width = 300
